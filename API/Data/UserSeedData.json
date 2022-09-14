@@ -13,6 +13,7 @@
     "Country": "Saint Vincent and The Grenadines",
     "Photos": [
       {
+        "Id": 1,
         "Url": "https://randomuser.me/api/portraits/women/93.jpg",
         "IsMain": true
       }
@@ -32,6 +33,7 @@
     "Country": "Swaziland",
     "Photos": [
       {
+        "Id": 2,
         "Url": "https://randomuser.me/api/portraits/women/83.jpg",
         "IsMain": true
       }
@@ -51,6 +53,7 @@
     "Country": "Micronesia",
     "Photos": [
       {
+        "Id": 3,
         "Url": "https://randomuser.me/api/portraits/women/46.jpg",
         "IsMain": true
       }
@@ -70,6 +73,7 @@
     "Country": "Guadeloupe",
     "Photos": [
       {
+        "Id": 4,
         "Url": "https://randomuser.me/api/portraits/women/42.jpg",
         "IsMain": true
       }
@@ -89,6 +93,7 @@
     "Country": "Panama",
     "Photos": [
       {
+        "Id": 5,
         "Url": "https://randomuser.me/api/portraits/women/39.jpg",
         "IsMain": true
       }
@@ -108,6 +113,7 @@
     "Country": "Estonia",
     "Photos": [
       {
+        "Id": 6,
         "Url": "https://randomuser.me/api/portraits/men/41.jpg",
         "IsMain": true
       }
@@ -127,6 +133,7 @@
     "Country": "Haiti",
     "Photos": [
       {
+        "Id": 7,
         "Url": "https://randomuser.me/api/portraits/men/45.jpg",
         "IsMain": true
       }
@@ -146,6 +153,7 @@
     "Country": "Uganda",
     "Photos": [
       {
+        "Id": 8,
         "Url": "https://randomuser.me/api/portraits/men/66.jpg",
         "IsMain": true
       }
@@ -165,6 +173,7 @@
     "Country": "Poland",
     "Photos": [
       {
+        "Id": 9,
         "Url": "https://randomuser.me/api/portraits/men/43.jpg",
         "IsMain": true
       }
@@ -184,6 +193,7 @@
     "Country": "New Zealand",
     "Photos": [
       {
+        "Id": 10,
         "Url": "https://randomuser.me/api/portraits/men/24.jpg",
         "IsMain": true
       }
