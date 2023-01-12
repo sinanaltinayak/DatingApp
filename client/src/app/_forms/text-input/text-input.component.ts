@@ -1,5 +1,5 @@
 import { Component, Input, OnInit, Self } from "@angular/core";
-import { ControlValueAccessor, NgControl } from "@angular/forms";
+import { ControlValueAccessor, FormControl, NgControl } from "@angular/forms";
 import { ControlValueAccessorModel } from "ngx-bootstrap/timepicker/models";
 
 @Component({
@@ -8,8 +8,8 @@ import { ControlValueAccessorModel } from "ngx-bootstrap/timepicker/models";
   styleUrls: ["./text-input.component.css"],
 })
 export class TextInputComponent implements ControlValueAccessor {
-  @Input() label: string;
-  @Input() type: "text";
+  @Input() label = "";
+  @Input() type = "text";
 
   constructor(@Self() public ngControl: NgControl) {
     this.ngControl.valueAccessor = this;
@@ -18,5 +18,7 @@ export class TextInputComponent implements ControlValueAccessor {
   registerOnChange(fn: any): void {}
   registerOnTouched(fn: any): void {}
 
-  ngOnInit(): void {}
+  get control(): FormControl {
+    return this.ngControl.control as FormControl;
+  }
 }

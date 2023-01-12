@@ -18,8 +18,8 @@ import { AccountService } from "../_services/account.service";
 })
 export class RegisterComponent implements OnInit {
   @Output() cancelRegister = new EventEmitter();
-  registerForm: FormGroup;
-  maxDate: Date;
+  registerForm: FormGroup = new FormGroup({});
+  maxDate: Date = new Date();
   validationErrors: string[] = [];
 
   constructor(
@@ -56,14 +56,14 @@ export class RegisterComponent implements OnInit {
         [Validators.required, this.matchValues("password")],
       ],
     });
-    this.registerForm.controls.password.valueChanges.subscribe(() => {
-      this.registerForm.controls.confirmPassword.updateValueAndValidity();
+    this.registerForm.controls["password"].valueChanges.subscribe(() => {
+      this.registerForm.controls["confirmPassword"].updateValueAndValidity();
     });
   }
 
   matchValues(matchTo: string): ValidatorFn {
     return (control: AbstractControl) => {
-      return control?.value === control?.parent?.controls[matchTo].value
+      return control?.value === control.parent?.get(matchTo)?.value
         ? null
         : { isMatching: true };
     };

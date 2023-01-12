@@ -1,7 +1,7 @@
 <div class="text-center mt-3" *ngIf="pagination">
-  <h2>Your Matches - {{ pagination?.TotalItems }} found</h2>
+  <h2>Your Matches - {{ pagination.TotalItems }} found</h2>
 </div>
-<div class="container mt-3">
+<div class="container mt-3" *ngIf="userParams">
   <form
     #form="ngForm"
     class="form-inline mb-3"

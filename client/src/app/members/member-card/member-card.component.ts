@@ -9,7 +9,7 @@ import { MembersService } from "src/app/_services/members.service";
   styleUrls: ["./member-card.component.css"],
 })
 export class MemberCardComponent implements OnInit {
-  @Input() member: Member;
+  @Input() member: Member | undefined;
 
   constructor(
     private memberService: MembersService,

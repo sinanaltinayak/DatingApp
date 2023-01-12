@@ -9,11 +9,11 @@ import { MembersService } from "../_services/members.service";
   styleUrls: ["./lists.component.css"],
 })
 export class ListsComponent implements OnInit {
-  members: Partial<Member[]>;
+  members: Member[] | undefined;
   predicate = "liked";
   pageNumber = 1;
   pageSize = 5;
-  pagination: Pagination;
+  pagination: Pagination | undefined;
   constructor(private memberService: MembersService) {}
 
   ngOnInit() {
@@ -23,10 +23,18 @@ export class ListsComponent implements OnInit {
   loadLikes() {
     this.memberService
       .getLikes(this.predicate, this.pageNumber, this.pageSize)
-      .subscribe((response) => {
-        console.log(response);
-        this.members = response.result;
-        this.pagination = response.pagination;
+      .subscribe({
+        next: (response) => {
+          this.members = response.result;
+          this.pagination = response.pagination;
+        },
       });
+  }
+
+  pageChanged(event: any) {
+    if (this.pageNumber !== event.page) {
+      this.pageNumber = event.page;
+      this.loadLikes();
+    }
   }
 }

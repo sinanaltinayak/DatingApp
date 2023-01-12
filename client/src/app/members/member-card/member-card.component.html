@@ -1,4 +1,4 @@
-<div class="card mb-4">
+<div class="card mb-4" *ngIf="member">
   <div class="card-img-wrapper">
     <img
       src="{{ member.photoUrl || './assets/user.png' }}"
@@ -14,13 +14,17 @@
           <i class="fa fa-user"></i>
         </button>
       </li>
-      <li class="list-inline-item">
+      <li class="list-inline-item" (click)="addLike(member)">
         <button class="btn btn-primary btn-sm">
           <i class="fa fa-heart"></i>
         </button>
       </li>
-      <li class="list-inline-item" (click)="addLike(member)">
-        <button class="btn btn-primary btn-sm">
+      <li class="list-inline-item">
+        <button
+          class="btn btn-primary btn-sm"
+          routerLink="/members/{{ member.username }}"
+          [queryParams]="{ tab: 'Messages' }"
+        >
           <i class="fa fa-envelope"></i>
         </button>
       </li>

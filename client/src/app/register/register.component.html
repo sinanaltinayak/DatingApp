@@ -21,32 +21,32 @@
     </label>
   </div>
   <app-text-input
-    [formControl]="registerForm.controls['username']"
+    [formControl]="$any(registerForm.controls['username'])"
     [label]="'Username'"
   ></app-text-input>
   <app-text-input
-    [formControl]="registerForm.controls['knownAs']"
+    [formControl]="$any(registerForm.controls['knownAs'])"
     [label]="'Known As'"
   ></app-text-input>
   <app-date-input
-    [formControl]="registerForm.controls['dateOfBirth']"
+    [formControl]="$any(registerForm.controls['dateOfBirth'])"
     [label]="'Date Of Birth'"
   ></app-date-input>
   <app-text-input
-    [formControl]="registerForm.controls['city']"
+    [formControl]="$any(registerForm.controls['city'])"
     [label]="'City'"
   ></app-text-input>
   <app-text-input
-    [formControl]="registerForm.controls['country']"
+    [formControl]="$any(registerForm.controls['country'])"
     [label]="'Country'"
   ></app-text-input>
   <app-text-input
-    [formControl]="registerForm.controls['password']"
+    [formControl]="$any(registerForm.controls['password'])"
     [label]="'Password'"
     [type]="'password'"
   ></app-text-input>
   <app-text-input
-    [formControl]="registerForm.controls['confirmPassword']"
+    [formControl]="$any(registerForm.controls['confirmPassword'])"
     [label]="'Confirm Password'"
     [type]="'password'"
   ></app-text-input>
